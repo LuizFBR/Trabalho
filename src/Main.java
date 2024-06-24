@@ -1,11 +1,9 @@
-import jogamp.newt.Debug;
 import processing.core.PApplet;
 import processing.core.PImage;
 
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 class Pair <V,E> {
     public V first;
@@ -87,16 +85,16 @@ public class Main extends PApplet {
             println("aaa");
         }
         int n = 1;
-        if (key >= 'a' && key <= 'f') {
+        if ((key >= 'a' && key <= 'f') || (key >= 'A' && key <= 'F')) {
             n = floor(random(1,10));
         }
-        else if (key >= 'g' && key <= 'l') {
+        else if ((key >= 'g' && key <= 'l') || (key >= 'G' && key <= 'L')) {
             n = floor(random(11,20));
         }
-        else if (key >= 'm' && key <= 't') {
+        else if ((key >= 'm' && key <= 't') || (key >= 'M' && key <= 'T')){
             n = floor(random(21, 30));
         }
-        else if (key >= 'u' && key <= 'z') {
+        else if ((key >= 'u' && key <= 'z') || (key >= 'U' && key <= 'Z') ){
             n = floor(random(31, 45));
         }
         else {
